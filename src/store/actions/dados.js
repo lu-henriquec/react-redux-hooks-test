@@ -4,3 +4,9 @@ export function handleContextData(data) {
     data
   };
 }
+
+export function cleanContextData() {
+  return {
+    type: 'CLEANDATA'
+  };
+}

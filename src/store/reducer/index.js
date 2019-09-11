@@ -16,6 +16,10 @@ export default function reducer(state = INITIAL_STATE, action) {
         ...state,
         dados: {...state.dados, ...action.data}
       };
+    case 'CLEANDATA':
+      return {
+        dados: {}
+      };
     default:
       return state;
   }

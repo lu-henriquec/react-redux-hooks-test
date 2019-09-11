@@ -1,9 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import * as StepActions from '../store/actions/step';
 
-function Launch({ dispatch }) {
+function Launch() {
+  const dispatch = useDispatch();
   return (
     <div>
       <button onClick={() => dispatch(StepActions.handleContextStep(1))}>Iniciar</button>
@@ -11,5 +12,4 @@ function Launch({ dispatch }) {
   );
 }
 
-
-export default connect(() => ({}))(Launch);
+export default Launch;
